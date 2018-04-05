@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="Moq" Version="4.8.2" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BirdCounter.Models\BirdCounter.Models.csproj" />
+    <ProjectReference Include="..\BirdCounter.Repositories\BirdCounter.Repositories.csproj" />
+    <ProjectReference Include="..\BirdCounter.Services\BirdCounter.Services.csproj" />
+    <ProjectReference Include="..\BirdCounter.Web\BirdCounter.Web.csproj" />
+  </ItemGroup>
+
+</Project>
