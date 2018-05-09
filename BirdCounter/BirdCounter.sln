@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdCounter.Web", "BirdCounter.Web\BirdCounter.Web.csproj", "{CE3B0F3E-7771-4422-B9D1-4FC787661344}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdCounter.Tests", "BirdCounter.Tests\BirdCounter.Tests.csproj", "{706BED3A-F27D-48EF-8E66-6DC0520A8B55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdCounter.Tests", "BirdCounter.Tests\BirdCounter.Tests.csproj", "{706BED3A-F27D-48EF-8E66-6DC0520A8B55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdCounter.Models", "BirdCounter.Models\BirdCounter.Models.csproj", "{CD07D0D7-EA51-44C6-AE58-B218C242D57C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdCounter.Models", "BirdCounter.Models\BirdCounter.Models.csproj", "{CD07D0D7-EA51-44C6-AE58-B218C242D57C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdCounter.Services", "BirdCounter.Services\BirdCounter.Services.csproj", "{143320EB-33E9-4993-9883-7D8DA59ADFBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdCounter.Services", "BirdCounter.Services\BirdCounter.Services.csproj", "{143320EB-33E9-4993-9883-7D8DA59ADFBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BirdCounter.Repositories", "BirdCounter.Repositories\BirdCounter.Repositories.csproj", "{B53518CE-4271-4BCF-85C3-039CA1F632D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdCounter.Repositories", "BirdCounter.Repositories\BirdCounter.Repositories.csproj", "{B53518CE-4271-4BCF-85C3-039CA1F632D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdCounter.Web", "BirdCounter.Web\BirdCounter.Web.csproj", "{6F58B70F-ED23-4E06-AC34-6494C2F31D64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CE3B0F3E-7771-4422-B9D1-4FC787661344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE3B0F3E-7771-4422-B9D1-4FC787661344}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE3B0F3E-7771-4422-B9D1-4FC787661344}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE3B0F3E-7771-4422-B9D1-4FC787661344}.Release|Any CPU.Build.0 = Release|Any CPU
 		{706BED3A-F27D-48EF-8E66-6DC0520A8B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{706BED3A-F27D-48EF-8E66-6DC0520A8B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{706BED3A-F27D-48EF-8E66-6DC0520A8B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{B53518CE-4271-4BCF-85C3-039CA1F632D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B53518CE-4271-4BCF-85C3-039CA1F632D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B53518CE-4271-4BCF-85C3-039CA1F632D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F58B70F-ED23-4E06-AC34-6494C2F31D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F58B70F-ED23-4E06-AC34-6494C2F31D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F58B70F-ED23-4E06-AC34-6494C2F31D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F58B70F-ED23-4E06-AC34-6494C2F31D64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

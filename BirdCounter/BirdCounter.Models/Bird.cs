@@ -14,5 +14,9 @@ namespace BirdCounter.Models
         public string Name { get; set; }
 
         public string ImageUrl { get; set; }
+
+
+        // Foreign key constraint
+        public ICollection<CountLog> CountLog { get; set; }
     }
 }

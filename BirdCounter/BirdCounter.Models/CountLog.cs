@@ -1,4 +1,5 @@
 ﻿using BirdCounter.Models._core;
+using BirdCounter.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,5 +21,13 @@ namespace BirdCounter.Models
         public DateTime DateOfCount { get; set; }
 
         public string Comment { get; set; }
+
+
+        // Foreing key constraints
+        public Bird Bird { get; set; }
+
+        public ApplicationUser ApplicationUser { get; set; }
+
+        public Event Event { get; set; }
     }
 }

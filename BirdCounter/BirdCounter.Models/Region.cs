@@ -12,5 +12,9 @@ namespace BirdCounter.Models
         public int ID { get; set; }
 
         public string Place { get; set; }
+
+
+        // Foreign key constraint
+        public ICollection<Event> Event { get; set; }
     }
 }
