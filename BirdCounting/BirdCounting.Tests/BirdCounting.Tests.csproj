@@ -8,12 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
+    <PackageReference Include="Moq" Version="4.8.2" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BirdCounting.Models\BirdCounting.Models.csproj" />
+    <ProjectReference Include="..\BirdCounting.Repositories\BirdCounting.Repositories.csproj" />
     <ProjectReference Include="..\BirdCounting.Services\BirdCounting.Services.csproj" />
     <ProjectReference Include="..\BirdCounting.Web\BirdCounting.Web.csproj" />
   </ItemGroup>

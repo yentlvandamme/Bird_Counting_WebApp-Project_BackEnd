@@ -28,7 +28,7 @@ namespace BirdCounting.Repositories
 
         public int GetNumberOfCountsByUserId(string id, int birdId)
         {
-            return _context.CountLogs.Where(u => u.applicationUser.Id == id && u.BirdID == birdId).Count();
+            return _context.CountLogs.Where(b => b.BirdID == birdId).Where(b => b.applicationUser.Id == id).Count();
         }
 
         public void Post(CountLog countLog)
