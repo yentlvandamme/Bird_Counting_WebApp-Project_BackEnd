@@ -16,5 +16,9 @@ namespace BirdCounting.Web.ViewModels
         public string selectedEvent { get; set; }
 
         public CountLog createdLog { get; set; }
+
+        public int TotalSpots { get; set; }
+
+        public int PersonalSpots { get; set; }
     }
 }

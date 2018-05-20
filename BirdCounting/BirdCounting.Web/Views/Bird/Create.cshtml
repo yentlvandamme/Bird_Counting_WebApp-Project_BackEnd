@@ -6,14 +6,20 @@
 
 <h2>@Html.DisplayFor(bird => Model.Bird.Name)</h2>
 
-<h4>PostCountPage_VM</h4>
 <hr />
+
+<img src="@Html.DisplayFor(birdPicture => Model.Bird.ImageUrl)" width="300" style="margin: 20px 0 40px"/>
+
+<p><strong>Total spots: </strong>@Html.DisplayFor(birdTotalSpots => Model.TotalSpots)</p>
+
+<p><strong>Times you spoted this bird: </strong>@Html.DisplayFor(birdPersonalSpots => Model.PersonalSpots)</p>
 
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <label>Choose an event</label>
                 @Html.DropDownList("selectedEvent", Model.selectEvents, "Pick an event")
             </div>
             <div class="form-group">
@@ -27,14 +33,14 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="SPOT" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Back to Overview</a>
 </div>
 
 @section Scripts {

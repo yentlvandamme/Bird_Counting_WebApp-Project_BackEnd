@@ -9,6 +9,8 @@ namespace BirdCounting.Repositories
     {
         int GetNumberOfCountsByBirdId(int id);
 
+        int GetNumberOfCountsByUserId(string id, int birdId);
+
         void Post(CountLog countLog);
     }
 }

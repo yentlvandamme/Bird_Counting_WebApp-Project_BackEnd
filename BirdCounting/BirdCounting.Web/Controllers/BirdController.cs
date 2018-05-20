@@ -83,6 +83,13 @@ namespace BirdCounting.Web.Controllers
             // Adding SelectList (dropdownlist) to the viewmodel
             postCountPage_VM.selectEvents = new SelectList(listItems, "Value", "Text") ;
 
+            // Adding number of total spots
+            postCountPage_VM.TotalSpots = _countLogService.GetNumberOfCountsByBirdId(id);
+
+            // Adding number of personal spots
+            string UserId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            postCountPage_VM.PersonalSpots = _countLogService.GetNumberOfCountsByUserId(UserId, id);
+
             return View(postCountPage_VM);
         }
 

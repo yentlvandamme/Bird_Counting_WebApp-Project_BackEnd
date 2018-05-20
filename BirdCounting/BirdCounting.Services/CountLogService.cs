@@ -20,6 +20,11 @@ namespace BirdCounting.Services
             return _countLogRepo.GetNumberOfCountsByBirdId(id);
         }
 
+        public int GetNumberOfCountsByUserId(string id, int birdId)
+        {
+            return _countLogRepo.GetNumberOfCountsByUserId(id, birdId);
+        }
+
         public void Post(CountLog countLog)
         {
             _countLogRepo.Post(countLog);

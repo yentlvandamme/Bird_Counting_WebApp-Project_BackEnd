@@ -19,6 +19,10 @@
 @foreach (var bird in Model.lstBirds) {
         <tr>
             <td>
+                @*<img src="@Html.Display("https://yentlvdblob.blob.core.windows.net/birdcountproject-pictures/"+bird.Name.ToLower()+".jpg")" />*@
+                <img src="@Html.DisplayFor(birdPicture => bird.ImageUrl)" width="200" />
+            </td>
+            <td>
                 <p>@Html.DisplayFor(birdName => bird.Name)</p>
                 <p>Total spots: @Html.DisplayFor(count => Model.countValues[bird.Name])</p>
                 @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
@@ -26,7 +30,7 @@
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
             </td>
             <td>
-                @Html.ActionLink("Make count", "Create", new { id = bird.ID})
+                @Html.ActionLink("Spot!", "Create", new { id = bird.ID})
             </td>
         </tr>
 }

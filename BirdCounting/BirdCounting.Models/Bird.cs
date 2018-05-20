@@ -14,7 +14,12 @@ namespace BirdCounting.Models
         public string Name { get; set; }
 
         [ScaffoldColumn(false)]
-        public string ImageUrl { get; set; }
+        public string ImageUrl {
+            get
+            {
+                return "/images/" + this.Name.Replace(" ", "").ToLower() + ".jpg";
+            }
+        }
 
         // Navigation Properties
         public ICollection<CountLog> CountLogs { get; set; }
