@@ -1,0 +1,42 @@
+﻿@model BirdCounting.Web.ViewModels.PostCountPage_VM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>@Html.DisplayFor(bird => Model.Bird.Name)</h2>
+
+<h4>PostCountPage_VM</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.DropDownList("selectedEvent", Model.selectEvents, "Pick an event")
+            </div>
+            <div class="form-group">
+                <label asp-for="createdLog.Comment" class="control-label"></label>
+                <input asp-for="createdLog.Comment" class="form-control" />
+                <span asp-validation-for="createdLog.Comment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="createdLog.BirdID" class="form-control" type="hidden" value=@Model.Bird.ID/>
+                <span asp-validation-for="createdLog.BirdID" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

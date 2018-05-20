@@ -1,0 +1,34 @@
+﻿@model BirdCounting.Web.ViewModels.CountPage_VM
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Overview</h2>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var bird in Model.lstBirds) {
+        <tr>
+            <td>
+                <p>@Html.DisplayFor(birdName => bird.Name)</p>
+                <p>Total spots: @Html.DisplayFor(count => Model.countValues[bird.Name])</p>
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+            <td>
+                @Html.ActionLink("Make count", "Create", new { id = bird.ID})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
